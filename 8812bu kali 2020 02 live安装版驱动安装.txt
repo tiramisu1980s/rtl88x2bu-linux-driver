@@ -1,0 +1,64 @@
+kali 2020 02  8812bu安装网卡方法：
+
+1：在Vmware中使用Kali时：将Vmware中的USB设置从USB 2.0更改为USB 3.0，网卡安装在USB 2.0口；
+步骤：(虚拟机---设置--USB控制器---USB兼容性默认USB 2.0改为USB 3.0)
+
+2：sudo -i (以超级用户名开始）
+     更新后安装依赖包：
+    (1)  apt-get update
+    (2)  apt-get upgrade
+    (3)  apt dist-upgrade
+
+ 以上3个更新 反复更新一下
+
+  （4）apt-get install libelf-dev
+  （5)  apt install make
+  （6)  apt install make-guile
+  （7)  apt install gcc  dkms 
+  （8）apt-get install libncurses5-dev libncursesw5-dev
+
+重点：以上安装后重启系统再进行下一步；
+
+
+3 :驱动复制到主目录  如: /home
+解压：  RTL88x2BU-Linux-Driver-master.zip
+
+1:  unzip RTL88x2BU-Linux-Driver-master.zip
+
+2:  cd RTL88x2BU-Linux-Driver-master
+
+ 2a:    apt-get update 
+
+3:  apt-get install bc
+
+4:  make 
+
+5:  make install 
+
+6: reboot
+
+
+注意事项：
+
+在Vmware中使用Kali时：将Vmware中的USB设置从USB 2.0更改为USB 3.0
+
+步骤：(虚拟机---设置--USB控制器---USB兼容性默认USB 2.0改为USB 3.0)
+
+
+8812开启监听方法如下：监听模式开启后桌面右上角是搜不到无线的
+
+sudo ip link set wlan0 down   （你的不一定是wlan0，注意一下网卡名字有的可能是wlxxxxx开头）
+
+sudo iw dev wlan0 set type monitor
+
+sudo ip link set wlan0 up
+
+airodump-ng wlan0 开启监听
+
+启动托管模式：能在桌面右上角搜到无线
+
+ip link set wlan0 down
+
+iwconfig wlan0 mode managed
+
+ip link set wlan0 up

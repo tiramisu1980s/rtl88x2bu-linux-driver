@@ -1,0 +1,69 @@
+﻿2020版kali vmware版本 
+
+打开终端 进入超级特权模式
+sudo -i 
+
+默认密码: kali
+
+更新过程中有停顿 按 :q 返回；
+
+2：sudo -i (以超级用户名开始）
+     更新后安装依赖包：
+    (1)  apt-get update
+    (2)  apt-get upgrade
+    (3)  apt dist-upgrade
+
+ 以上3个更新 反复更新一下
+
+  （4）apt-get install libelf-dev
+  （5)  apt install make
+  （6)  apt install make-guile
+  （7)  apt install gcc  dkms 
+  （8）apt-get install libncurses5-dev libncursesw5-dev
+
+重点：以上安装后重启系统再进行下一步；
+
+
+重点，以上安装后要重启系统 再进行下一步安装驱动；
+
+
+驱动解压 RTL88x2BU-Linux-Driver-master.zip
+
+unzip RTL88x2BU-Linux-Driver-master.zip
+
+cd RTL88x2BU-Linux-Driver-master
+
+apt-get update 
+
+apt-get install bc
+
+make 
+
+make install 
+
+reboot
+
+注意事项：
+
+在Vmware中使用Kali时：将Vmware中的USB设置从USB 2.0更改为USB 3.0
+
+步骤：(虚拟机---设置--USB控制器---USB兼容性默认USB 2.0改为USB 3.0)
+
+
+8812开启监听方法如下：监听模式开启后桌面右上角是搜不到无线的
+启动监控模式：
+
+ip link set wlan0 down
+iwconfig wlan0 mode monitor
+ip link set wlan0 up
+
+启动托管模式：
+
+ip link set wlan0 down
+iwconfig wlan0 mode managed
+ip link set wlan0 up
+
+
+
+重要信息：在Vmware中使用Kali时：将Vmware中的USB设置从USB 2.0更改为USB 3.0。
+

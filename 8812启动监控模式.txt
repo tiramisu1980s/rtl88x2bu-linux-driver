@@ -1,0 +1,17 @@
+启动监控模式：
+
+ip link set wlan0 down
+iwconfig wlan0 mode monitor
+ip link set wlan0 up
+
+启动托管模式：
+
+ip link set wlan0 down
+iwconfig wlan0 mode managed
+ip link set wlan0 up
+
+
+
+
+
+
