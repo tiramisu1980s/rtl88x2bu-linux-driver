@@ -1,14 +1,13 @@
-Æô¶¯¼à¿ØÄ£Ê½£º
+å¯åŠ¨ç›‘æ§æ¨¡å¼ï¼š
 
 ip link set wlan0 down
 iwconfig wlan0 mode monitor
 ip link set wlan0 up
 
-Æô¶¯ÍĞ¹ÜÄ£Ê½£º
+å¯åŠ¨æ‰˜ç®¡æ¨¡å¼ï¼š
 
 ip link set wlan0 down
 iwconfig wlan0 mode managed
-ip link set wlan0 up
 
 
 
