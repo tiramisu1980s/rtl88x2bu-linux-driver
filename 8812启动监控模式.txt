@@ -13,6 +13,6 @@ iwconfig wlan0 mode managed
   airodump-ng wlan0
   监听模式
 
-
+监听模式
 
 
