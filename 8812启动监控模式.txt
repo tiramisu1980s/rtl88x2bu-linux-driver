@@ -9,7 +9,7 @@ ip link set wlan0 up
 ip link set wlan0 down
 iwconfig wlan0 mode managed
 
-监听模式：
+监听
   airodump-ng wlan0
  
 
