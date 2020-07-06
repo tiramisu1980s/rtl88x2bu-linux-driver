@@ -10,6 +10,7 @@ ip link set wlan0 down
 iwconfig wlan0 mode managed
 
 监听
+  fjksjfkjskl
   airodump-ng wlan0
  
 
