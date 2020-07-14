@@ -13,4 +13,4 @@ iwconfig wlan0 mode managed
 
   airodump-ng wlan0
  
-
+zx
